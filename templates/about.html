@@ -1,0 +1,121 @@
+{% extends "base.html" %}
+
+{% block title %}关于我们 - 现代化企业{% endblock %}
+
+{% block content %}
+<style>
+    :root {
+        --primary-color: #4f46e5;
+        --secondary-color: #818cf8;
+    }
+    
+    .team-member:hover {
+        transform: translateY(-10px);
+        transition: all 0.3s ease;
+    }
+    
+    .gradient-bg {
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    }
+    
+    .stat-card {
+        border-left: 4px solid var(--primary-color);
+        transition: all 0.3s ease;
+    }
+</style>
+
+<main class="gradient-bg min-vh-100 py-5">
+    <div class="container">
+        <!-- 头部 -->
+        <div class="row text-center mb-5">
+            <div class="col-12">
+                <h1 class="display-4 fw-bold mb-3 animate__animated animate__fadeInDown">
+                    创新驱动未来
+                    <i class="fas fa-rocket text-primary ms-2"></i>
+                </h1>
+                <p class="lead text-muted">成立于2023年，致力于用技术改变世界</p>
+            </div>
+        </div>
+
+        <!-- 核心内容 -->
+        <div class="row g-4">
+            <!-- 左侧介绍 -->
+            <div class="col-lg-6">
+                <div class="card shadow-lg h-100">
+                    <div class="card-body p-4">
+                        <h3 class="mb-4">
+                            <i class="fas fa-lightbulb text-warning me-2"></i>
+                            我们的使命
+                        </h3>
+                        <p class="text-muted">通过技术创新，为企业提供智能化解决方案，推动数字化转型。</p>
+                        
+                        <div class="mt-4">
+                            <h4>
+                                <i class="fas fa-cogs text-primary me-2"></i>
+                                核心技术
+                            </h4>
+                            <div class="d-flex flex-wrap gap-2 mt-3">
+                                <span class="badge bg-primary bg-opacity-10 text-primary py-2">AI 算法</span>
+                                <span class="badge bg-success bg-opacity-10 text-success py-2">云计算</span>
+                                <span class="badge bg-danger bg-opacity-10 text-danger py-2">大数据</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 右侧团队 -->
+            <div class="col-lg-6">
+                <div class="card shadow-lg h-100">
+                    <div class="card-body p-4">
+                        <h3 class="mb-4">
+                            <i class="fas fa-users text-info me-2"></i>
+                            精英团队
+                        </h3>
+                        <div class="row row-cols-1 row-cols-md-2 g-3">
+                            <div class="col">
+                                <div class="team-member text-center p-3 rounded-3">
+                                    <img src="https://source.unsplash.com/80x80/?portrait,man" 
+                                         class="rounded-circle mb-2 shadow-sm" 
+                                         alt="团队成员">
+                                    <h5 class="mb-0">张伟</h5>
+                                    <small class="text-muted">首席架构师</small>
+                                </div>
+                            </div>
+                            <!-- 更多团队成员... -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 统计数字 -->
+        <div class="row mt-5 g-4">
+            <div class="col-md-4">
+                <div class="stat-card bg-white p-4 rounded-3">
+                    <h2 class="text-primary">15+</h2>
+                    <p class="mb-0">成功项目案例</p>
+                    <i class="fas fa-trophy float-end text-muted mt-2"></i>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="stat-card bg-white p-4 rounded-3">
+                    <h2 class="text-success">99.9%</h2>
+                    <p class="mb-0">系统可用性</p>
+                    <i class="fas fa-shield-alt float-end text-muted mt-2"></i>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="stat-card bg-white p-4 rounded-3">
+                    <h2 class="text-danger">24/7</h2>
+                    <p class="mb-0">技术支持服务</p>
+                    <i class="fas fa-headset float-end text-muted mt-2"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- 动态图标 -->
+<script src="https://kit.fontawesome.com/your-kit-code.js"></script>
+{% endblock %}
